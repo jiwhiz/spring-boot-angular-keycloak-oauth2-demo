@@ -1,0 +1,16 @@
+server:
+  port: 8088
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://127.0.0.1:8080/realms/demo-realm
+          jwk-set-uri: http://127.0.0.1:8080/realms/demo-realm/protocol/openid-connect/certs
+
+logging:
+  level:
+    ROOT: INFO
+    com.jiwhiz: DEBUG
+    org.springframework.security: TRACE
